@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
 const routes = [
@@ -38,7 +38,9 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  
+  //history: createWebHistory(process.env.BASE_URL), // Use for local
+  history: createWebHashHistory('/vue-facts-router/'), // Use for GitHub
   routes,
 });
 
